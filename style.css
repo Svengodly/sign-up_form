@@ -1,21 +1,51 @@
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     font-family: Audiowide, sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+.left_panel {
+    position: relative;
+    width: 55vw;
+    height: 100vh;
+    background-image: url(fps.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-size: cover;
+}
+
+div.left_panel > p{
+    top: 100px;
+    position: absolute;
+    background-color: rgba(255, 240, 230, .8);
+    font-size: 2em;
+    width: 100%;
+    padding: 1.2em 0px;
+    text-align: center;
 }
 
 .main {
     display: flex;
 }
 
-img {
-    width: 45vw;
-}
-
 .form {
-    width: 40em;
+  flex-shrink: 3;
+  padding: 0px 3em;
 }
 
-p {
-    z-index: -1;
+input {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
