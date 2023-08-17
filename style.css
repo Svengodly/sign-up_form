@@ -19,7 +19,7 @@ body {
     background-image: url(fps.png);
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: contain; */
+    background-size: cover;
 }
 
 div.left_panel > h1{
@@ -42,7 +42,7 @@ div.left_panel > h1{
 .right_panel {
   flex-shrink: 3;
   padding-left: 3em;
-  padding-right: 8em;
+  padding-right: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +66,7 @@ button {
 ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -91,7 +91,7 @@ p {
 }
 
 fieldset, p, .left_panel {
-    min-width: 400px;
+    min-width: 300px;
 }
 
 @media only screen and (min-width: 720px) {
@@ -99,10 +99,14 @@ fieldset, p, .left_panel {
         position: sticky;
         width: 55vw;
         height: 100vh;
+        background-size: cover;
     }
 
     .main {
         flex-direction: row;
     }
 
+    ul {
+        flex-direction: row;
+    }
 }
