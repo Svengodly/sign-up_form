@@ -18,7 +18,7 @@ body {
     height: 45vh;
     background-image: url(fps.png);
     background-repeat: no-repeat;
-    background-position-x: 20%;
+    background-position: center;
     background-size: cover;
 }
 
