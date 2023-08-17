@@ -19,7 +19,7 @@ body {
     background-image: url(fps.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    /* background-size: contain; */
 }
 
 div.left_panel > h1{
@@ -90,8 +90,8 @@ p {
     font-size: 1.5em;
 }
 
-fieldset, p {
-    min-width: 500px;
+fieldset, p, .left_panel {
+    min-width: 400px;
 }
 
 @media only screen and (min-width: 720px) {
