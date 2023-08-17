@@ -11,10 +11,11 @@ body {
 }
 
 .left_panel {
-    position: sticky;
+    /* postion: sticky on desktop */
+    position: relative;
     top: 0;
-    width: 55vw;
-    height: 100vh;
+    /* width: 55vw; on desktop */
+    height: 45vh;
     background-image: url(fps.png);
     background-repeat: no-repeat;
     background-position-x: 20%;
@@ -22,10 +23,11 @@ body {
 }
 
 div.left_panel > h1{
-    top: 100px;
+    top: 10%;
     position: absolute;
     background-color: rgba(255, 240, 230, .8);
     font-size: 2em;
+    /* height: 2em; */
     width: 100%;
     padding: 1.2em 0px;
     text-align: center;
@@ -33,6 +35,8 @@ div.left_panel > h1{
 
 .main {
     display: flex;
+    /* flex-direction: row on desktops */
+    flex-direction: column;
 }
 
 .right_panel {
@@ -84,4 +88,21 @@ li{
 
 p {
     font-size: 1.5em;
+}
+
+fieldset, p {
+    min-width: 500px;
+}
+
+@media only screen and (min-width: 720px) {
+    .left_panel {
+        position: sticky;
+        width: 55vw;
+        height: 100vh;
+    }
+
+    .main {
+        flex-direction: row;
+    }
+
 }
