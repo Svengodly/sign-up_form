@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(255, 255, 255);
     font-family: Audiowide, sans-serif;
@@ -7,7 +11,8 @@ body {
 }
 
 .left_panel {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 55vw;
     height: 100vh;
     background-image: url(fps.png);
@@ -16,7 +21,7 @@ body {
     background-size: cover;
 }
 
-div.left_panel > p{
+div.left_panel > h1{
     top: 100px;
     position: absolute;
     background-color: rgba(255, 240, 230, .8);
@@ -30,16 +35,28 @@ div.left_panel > p{
     display: flex;
 }
 
-.form {
+.right_panel {
   flex-shrink: 3;
-  padding: 0px 3em;
+  padding-left: 3em;
+  padding-right: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-input {
+.right_panel button,
+.right_panel fieldset {
+    margin-top: 60px;
+}
+
+/* Some form widgets do not automatically inherit the font size and font family of their parents. Browsers will instead use the system's default. */
+input,
+button {
   width: 150px;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
 }
 
 ul {
@@ -49,3 +66,22 @@ ul {
     flex-wrap: wrap;
 }
 
+.inputs {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+label {
+    /* Labels are, by default, inline elements. The width of inline elements cannot be explicitly set. */
+    display: inline-block;
+    width: 140px;
+    margin: 25px 0px;
+}
+
+li{
+    width: 50%;
+}
+
+p {
+    font-size: 1.5em;
+}
