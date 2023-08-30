@@ -63,6 +63,16 @@ button {
   font-size: 100%;
 }
 
+button {
+    margin-bottom: 5vh;
+    padding: 8px 0px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px gray;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -78,12 +88,14 @@ ul {
 label {
     /* Labels are, by default, inline elements. The width of inline elements cannot be explicitly set. */
     display: inline-block;
-    width: 140px;
-    margin: 25px 0px;
+    width: 180px;
+    margin-top: 25px;
 }
 
 li{
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -94,7 +106,40 @@ fieldset, p, .left_panel {
     min-width: 300px;
 }
 
-@media only screen and (min-width: 720px) {
+input {
+/* Remove System-Level styling */
+appearance: none;
+border-radius: 3px;
+/* border: 2px solid silver; */
+padding-left: 5px;
+width: 180px;
+}
+
+
+input:valid {
+    border: solid 2px green;
+}
+
+input:invalid {
+    border: solid 2px red;
+}
+
+/* input:required {
+    border: solid 2px black;
+} */
+
+input:focus:invalid,
+input:focus:valid {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 5px 5px 10px black;
+}
+
+li > p {
+    font-size: 11px;
+}
+
+@media only screen and (min-width: 880px) {
     .left_panel {
         position: sticky;
         width: 55vw;

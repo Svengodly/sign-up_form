@@ -43,17 +43,18 @@
                         <li>
                             <label for="phone">Phone Number:</label>
                             <!-- Need to perform pattern matching; tel type brings up numpad, but does not restrict usage of letters. -->
-                            <input type="tel" id="phone">
+                            <input type="tel" id="phone" placeholder="123-456-7890" pattern="(\d{3})-?(\d{3}[\-]?\d{4})">
                         </li>
     
                         <li>
                             <label for="pass">Password:*</label>
-                            <input type="password" id="pass" required>
+                            <input type="password" id="pass" minlength="8" title="Must be at least 8 characters long." required>
+                            <p>Must be at least 8 characters long.</p>
                         </li>
     
                         <li>
                             <label for="pass_match">Confirm Password:*</label>
-                            <input type="password" id="pass_match" required>
+                            <input type="password" id="pass_match" minlength="8" required>
                         </li>
                     </ul>
                 </fieldset>
@@ -61,5 +62,6 @@
             </form>
         </div>
     </div>
+    <script src="myScript.js"></script>
 </body>
 </html>
